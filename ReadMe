@@ -18,6 +18,8 @@ Description:    The code learns Support Vector Machines using 'linear' kernel to
                 combinations of the the different parameters (including the slack variable C in SVM, principal component size in SVD
                 truncation and usage of monograms or bigrams in the feature extraction stage) a best estimator was selected based on 
                 the score
+                
+Input:          A tsv or csv file containing two columns, sentiments and reviews which are tab seperated.
 
 Implementation: The file movie-reviews-sentiment.tsv was split into 66% train data and the remaining as test data, The best estimator 
                 was selected after 6-fold validation on the train data. This model was then trained with the whole train data set and 

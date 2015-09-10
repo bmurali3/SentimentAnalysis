@@ -1,0 +1,31 @@
+Name:   Bharath Murali
+Email:  bmurali3@gatech.edu
+
+
+
+Sentiment Analysis using Twitter Data
+
+File (Script): SentimentAnalysis.py
+
+               run as 
+               Python SentimentAnalysis.py
+
+Description:    The code learns Support Vector Machines using 'linear' kernel to classify test data. Scikit-learn's 
+                LinearSVC provides a fast implementation for linear kernel SVMs. The features extracted from the text included 
+                the Tf-idf matrix, a commonly used method to convert text into a vetor space. Scikit-learn;s TfidVectorizer
+                provides a complete and convenient set of functions for this. In addition to this, TruncatedSVD, another class in
+                scikit-learn is used to approximate the feature vectors to a lower dimension (100~500 dimensions). Applying various
+                combinations of the the different parameters (including the slack variable C in SVM, principal component size in SVD
+                truncation and usage of monograms or bigrams in the feature extraction stage) a best estimator was selected based on 
+                the score
+
+Implementation: The file movie-reviews-sentiment.tsv was split into 66% train data and the remaining as test data, The best estimator 
+                was selected after 6-fold validation on the train data. This model was then trained with the whole train data set and 
+                tested on the test set.
+
+Results:        The best estimator was one that used both monograms and bigrams, having C=100 and principal components = 500. The accuracy
+                of prediction validated by the test data was 73.86%.
+
+Notes:          SVM implementation using the cvxopt library was attempted, but the memory requirement for solvin the constrained optimization problem
+                was too high resulting in memory errors. If cvxopt libraries are not installed, the appropriate code will have to be commented
+                in order to run the script. I apologise because minimum error handling was done.

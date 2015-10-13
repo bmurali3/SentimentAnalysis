@@ -12,7 +12,7 @@ File (Script): SentimentAnalysis.py
 
 Description:    The code learns Support Vector Machines using 'linear' kernel to classify test data. Scikit-learn's 
                 LinearSVC provides a fast implementation for linear kernel SVMs. The features extracted from the text included 
-                the Tf-idf matrix, a commonly used method to convert text into a vetor space. Scikit-learn;s TfidVectorizer
+                the Tf-idf matrix, a commonly used method to convert text into a vetor space. Scikit-learn's TfidVectorizer
                 provides a complete and convenient set of functions for this. In addition to this, TruncatedSVD, another class in
                 scikit-learn is used to approximate the feature vectors to a lower dimension (100~500 dimensions). Applying various
                 combinations of the the different parameters (including the slack variable C in SVM, principal component size in SVD
@@ -30,4 +30,4 @@ Results:        The best estimator was one that used both monograms and bigrams,
 
 Notes:          SVM implementation using the cvxopt library was attempted, but the memory requirement for solvin the constrained optimization problem
                 was too high resulting in memory errors. If cvxopt libraries are not installed, the appropriate code will have to be commented
-                in order to run the script. I apologise because minimum error handling was done.
+                in order to run the script. I apologize as minimum error handling was done.
